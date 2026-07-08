@@ -1,0 +1,32 @@
+# Memoria de trabajo local
+CLAUDE.md
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Claude Code / editores
+.claude/
+settings_local.json
+settings*.local.json
+*.local.json
+.vscode/
+.idea/
+
+# Secretos
+.env
+.env.*
+*.key
+*.pem
+credentials*
+
+# Logs y temporales
+*.log
+*.tmp
+
+# Fuentes de apuntes (no publicables)
+Optimizar PDF's/
+build/
+*.aux
+*.out
+*.synctex.gz
