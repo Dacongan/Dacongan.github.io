@@ -146,8 +146,11 @@ Full editions are available on request — first-year students can reach out thr
 
 ## ⚖️ Legal notice &amp; license
 
-The **source code** of this site is open for reference and learning.
-All **personal content** — texts, course notes (PDFs), branding and images — is © 2026 **David Conesa Pagán**, all rights reserved.
+This repository is covered by **two separate terms**:
+
+- **Source code** (HTML, CSS &amp; JavaScript) — released under the **MIT License**. You are free to use, modify and redistribute it, keeping the copyright notice. See [`LICENSE`](LICENSE).
+- **Personal content** — texts, course notes (PDFs), images and branding — is © 2026 **David Conesa Pagán**, **all rights reserved**. It may not be reused, redistributed or adapted without written permission.
+
 See [`aviso-legal.html`](https://dacongan.github.io/aviso-legal.html) for the full legal notice.
 
 <div align="center">
