@@ -118,7 +118,9 @@
     background:var(--brass);transition:width .25s ease;
   }
   .nav-links a:hover::after{width:100%}
-  @media(max-width:680px){.nav-links{display:none}}
+  /* Con 7 enlaces el nav va justo: aprieta antes de esconderlo */
+  @media(max-width:1024px){.nav-links{gap:17px}.nav-links a{font-size:.79rem}}
+  @media(max-width:900px){.nav-links{display:none}}
 
   .nav-right{display:flex;align-items:center;gap:24px}
   .theme-toggle{
@@ -565,7 +567,8 @@
         <li><a href="#formacion"><span data-i18n="es">Formación</span><span data-i18n="en">Education</span></a></li>
         <li><a href="#experiencia"><span data-i18n="es">Experiencia</span><span data-i18n="en">Experience</span></a></li>
         <li><a href="#certificaciones"><span data-i18n="es">Certificaciones</span><span data-i18n="en">Certifications</span></a></li>
-        <li hidden><a href="#proyectos"><span data-i18n="es">Proyectos</span><span data-i18n="en">Projects</span></a></li>
+        <li><a href="#proyectos"><span data-i18n="es">Proyectos</span><span data-i18n="en">Projects</span></a></li>
+        <li><a href="#material"><span data-i18n="es">Material</span><span data-i18n="en">Material</span></a></li>
         <li><a href="#contacto"><span data-i18n="es">Contacto</span><span data-i18n="en">Contact</span></a></li>
       </ul>
       <button type="button" class="lang-toggle" id="langToggle" aria-label="Switch to English" aria-pressed="false" title="Idioma / Language">
@@ -847,29 +850,6 @@
         <div class="tl-org">Universidad de Murcia</div>
         <p data-i18n="es">Base en cálculo, álgebra y física. Reorientación propia hacia la ingeniería buscando la aplicación práctica de esa fundamentación científica.</p>
         <p data-i18n="en">Grounding in calculus, algebra and physics. A deliberate move toward engineering, seeking the practical application of that scientific foundation.</p>
-        <div class="tl-materials">
-          <button class="tl-toggle" type="button" aria-expanded="false" aria-controls="mat-fisica1">
-            <span data-i18n="es">Material de esta etapa</span><span data-i18n="en">Course material</span>
-            <span class="cnt">1</span>
-            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="tl-panel" id="mat-fisica1">
-            <div class="tl-panel-inner">
-              <div class="tl-mat">
-                <span class="m-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 7 4 12l5 5"/><path d="M15 7l5 5-5 5"/></svg></span>
-                <div class="m-body">
-                  <div class="m-kicker"><span data-i18n="es">Depósito · DOI</span><span data-i18n="en">Repository · DOI</span></div>
-                  <div class="m-title"><span data-i18n="es">Apuntes de Laboratorio de Ordenadores</span><span data-i18n="en">Computer Laboratory Notes</span></div>
-                  <div class="m-note"><span data-i18n="es">Física computacional en Python, publicado en Zenodo.</span><span data-i18n="en">Computational physics in Python, published on Zenodo.</span></div>
-                </div>
-                <a class="m-link" href="https://doi.org/10.5281/zenodo.20773128" target="_blank" rel="noopener">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14 21 3"/><path d="M15 3h6v6"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>
-                  <span data-i18n="es">Abrir</span><span data-i18n="en">Open</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -994,12 +974,74 @@
   </div>
 </section>
 
-<section id="proyectos" hidden>
+<section id="proyectos">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="label"><span data-i18n="es">05 — Proyectos</span><span data-i18n="en">05 — Projects</span></span>
       <h2 data-i18n="es">Ciencia aplicada, hecha tangible.</h2>
       <h2 data-i18n="en">Applied science, made tangible.</h2>
+    </div>
+
+    <article class="project reveal" data-d="1">
+      <div class="project-visual">
+        <svg viewBox="0 0 480 360" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <defs>
+            <pattern id="pvpergrid" width="34" height="34" patternUnits="userSpaceOnUse">
+              <path d="M34 0H0V34" fill="none" stroke="rgba(244,245,243,.05)" stroke-width="1"/>
+            </pattern>
+          </defs>
+          <rect width="480" height="360" fill="url(#pvpergrid)"/>
+          <g fill="#cf9a57" fill-opacity=".85">
+            <rect x="73" y="96" width="30" height="30" rx="4"/><rect x="111" y="96" width="30" height="30" rx="4"/><rect x="149" y="96" width="30" height="30" rx="4"/><rect x="225" y="96" width="30" height="30" rx="4"/><rect x="263" y="96" width="30" height="30" rx="4"/><rect x="301" y="96" width="30" height="30" rx="4"/><rect x="377" y="96" width="30" height="30" rx="4"/>
+            <rect x="73" y="134" width="30" height="30" rx="4"/><rect x="149" y="134" width="30" height="30" rx="4"/><rect x="187" y="134" width="30" height="30" rx="4"/><rect x="225" y="134" width="30" height="30" rx="4"/><rect x="263" y="134" width="30" height="30" rx="4"/><rect x="339" y="134" width="30" height="30" rx="4"/><rect x="377" y="134" width="30" height="30" rx="4"/>
+            <rect x="73" y="172" width="30" height="30" rx="4"/><rect x="149" y="172" width="30" height="30" rx="4"/><rect x="187" y="172" width="30" height="30" rx="4"/><rect x="263" y="172" width="30" height="30" rx="4"/><rect x="301" y="172" width="30" height="30" rx="4"/><rect x="339" y="172" width="30" height="30" rx="4"/>
+            <rect x="111" y="210" width="30" height="30" rx="4"/><rect x="149" y="210" width="30" height="30" rx="4"/><rect x="187" y="210" width="30" height="30" rx="4"/><rect x="225" y="210" width="30" height="30" rx="4"/><rect x="301" y="210" width="30" height="30" rx="4"/><rect x="339" y="210" width="30" height="30" rx="4"/>
+            <rect x="73" y="248" width="30" height="30" rx="4"/><rect x="111" y="248" width="30" height="30" rx="4"/><rect x="187" y="248" width="30" height="30" rx="4"/><rect x="263" y="248" width="30" height="30" rx="4"/><rect x="339" y="248" width="30" height="30" rx="4"/><rect x="377" y="248" width="30" height="30" rx="4"/>
+          </g>
+          <g fill="none" stroke="rgba(244,245,243,.28)" stroke-width="1.2">
+            <rect x="187" y="96" width="30" height="30" rx="4"/><rect x="339" y="96" width="30" height="30" rx="4"/>
+            <rect x="111" y="134" width="30" height="30" rx="4"/><rect x="301" y="134" width="30" height="30" rx="4"/>
+            <rect x="111" y="172" width="30" height="30" rx="4"/><rect x="225" y="172" width="30" height="30" rx="4"/><rect x="377" y="172" width="30" height="30" rx="4"/>
+            <rect x="73" y="210" width="30" height="30" rx="4"/><rect x="263" y="210" width="30" height="30" rx="4"/><rect x="377" y="210" width="30" height="30" rx="4"/>
+            <rect x="149" y="248" width="30" height="30" rx="4"/><rect x="225" y="248" width="30" height="30" rx="4"/><rect x="301" y="248" width="30" height="30" rx="4"/>
+          </g>
+          <line x1="73" y1="296" x2="407" y2="296" stroke="rgba(244,245,243,.14)" stroke-width="1"/>
+          <text x="73" y="322" fill="#cf9a57" font-family="'IBM Plex Mono',monospace" font-size="19" font-weight="500">32 / 45</text>
+          <text x="407" y="322" text-anchor="end" fill="rgba(244,245,243,.45)" font-family="'IBM Plex Mono',monospace" font-size="13">RD 875/2014</text>
+        </svg>
+        <span class="project-tag"><span data-i18n="es">Software · Náutica</span><span data-i18n="en">Software · Nautical</span></span>
+      </div>
+      <div class="project-body">
+        <span class="label"><span data-i18n="es">Proyecto propio · 2026</span><span data-i18n="en">Personal project · 2026</span></span>
+        <h3 data-i18n="es">Simulador de examen del PER</h3>
+        <h3 data-i18n="en">PER exam simulator</h3>
+        <p data-i18n="es">Simulador del examen de Patrón de Embarcaciones de Recreo que aplica el criterio de aprobado del RD 875/2014 completo, incluidos los mínimos por bloque. Banco de 692 preguntas extraídas de 20 convocatorias oficiales (2017–2026) y verificadas una a una contra su plantilla de respuestas; ese cruce corrigió 4 respuestas erróneas y fusionó 51 duplicados. Un solo fichero HTML, sin dependencias y sin ninguna petición de red. Lo construí para preparar mi propio examen: estudié con él y resulté apto.</p>
+        <p data-i18n="en">A simulator for the Spanish recreational boating licence (PER) exam, applying the full RD 875/2014 pass criteria, per-block minimums included. A bank of 692 questions extracted from 20 official exam sittings (2017–2026) and verified one by one against their answer keys; that cross-check fixed 4 wrong answers and merged 51 duplicates. A single HTML file, no dependencies and no network requests. I built it to prepare for my own exam: I studied with it and passed.</p>
+        <ul class="tech-list">
+          <li>JavaScript</li>
+          <li>Node.js</li>
+          <li>GitHub Actions</li>
+          <li><span data-i18n="es">Sin dependencias</span><span data-i18n="en">Zero dependencies</span></li>
+          <li><span data-i18n="es">Repetición espaciada</span><span data-i18n="en">Spaced repetition</span></li>
+        </ul>
+        <div class="project-links">
+          <a class="link-pill solid" href="https://github.com/Dacongan/simulador-per" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.6 2 12.3c0 4.5 2.9 8.3 6.8 9.7.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.3 1.1 2.9.9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.2-4.6-5.1 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.3 9.3 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.8-4.6 5.1.4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10.2 10.2 0 0 0 22 12.3C22 6.6 17.5 2 12 2z"/></svg>
+            <span data-i18n="es">Ver en GitHub</span><span data-i18n="en">View on GitHub</span>
+          </a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="material" style="background:var(--paper-dim)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label"><span data-i18n="es">06 — Material propio</span><span data-i18n="en">06 — Own material</span></span>
+      <h2 data-i18n="es">Documentación de elaboración propia, con DOI.</h2>
+      <h2 data-i18n="en">My own documentation, with a DOI.</h2>
     </div>
 
     <article class="project reveal" data-d="1">
@@ -1047,7 +1089,7 @@
         <span class="project-tag"><span data-i18n="es">Física experimental</span><span data-i18n="en">Experimental physics</span></span>
       </div>
       <div class="project-body">
-        <span class="label"><span data-i18n="es">Publicación · 2026 · UPCT</span><span data-i18n="en">Publication · 2026 · UPCT</span></span>
+        <span class="label"><span data-i18n="es">Depósito con DOI · 2026 · UPCT</span><span data-i18n="en">DOI deposit · 2026 · UPCT</span></span>
         <h3 data-i18n="es">La circunferencia de la Tierra por el método de Eratóstenes</h3>
         <h3 data-i18n="en">The Earth's circumference by Eratosthenes' method</h3>
         <p data-i18n="es">Actividad de Física II del Grado en Arquitectura Naval (UPCT): recreación del experimento de Eratóstenes con una variante de una sola vara medida en el solsticio de verano (Torre-Pacheco). A partir de la sombra de un gnomon al mediodía solar se obtiene el ángulo cenital del Sol y se estima la circunferencia terrestre en 39,6 ± 0,5 × 10³ km, a un 0,9 % de la circunferencia polar real. Incluye propagación de incertidumbres por Monte Carlo y código Python reproducible.</p>
@@ -1095,7 +1137,7 @@
         <span class="project-tag"><span data-i18n="es">Física computacional</span><span data-i18n="en">Computational physics</span></span>
       </div>
       <div class="project-body">
-        <span class="label"><span data-i18n="es">Publicación · 2025 · UMU</span><span data-i18n="en">Publication · 2025 · UMU</span></span>
+        <span class="label"><span data-i18n="es">Depósito con DOI · 2025 · UMU</span><span data-i18n="en">DOI deposit · 2025 · UMU</span></span>
         <h3 data-i18n="es">Apuntes de Laboratorio de Ordenadores</h3>
         <h3 data-i18n="en">Computer Laboratory Notes</h3>
         <p data-i18n="es">Apuntes, código y prácticas resueltas de Física Computacional (1.º del Grado en Física, UMU): integración numérica por Euler y Euler modificado, y simulaciones del oscilador armónico, el problema de dos cuerpos (órbita Tierra-Sol), el péndulo y un muelle en 2D. Maquetado en LaTeX, con código Python reproducible y comentado.</p>
@@ -1128,7 +1170,7 @@
 <section id="contacto" class="contact">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="label"><span data-i18n="es">05 — Contacto</span><span data-i18n="en">05 — Contact</span></span>
+      <span class="label"><span data-i18n="es">07 — Contacto</span><span data-i18n="en">07 — Contact</span></span>
       <h2 data-i18n="es">Trabajemos juntos.</h2>
       <h2 data-i18n="en">Let's work together.</h2>
     </div>
