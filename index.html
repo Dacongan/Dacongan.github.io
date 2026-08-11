@@ -1020,14 +1020,14 @@
         <span class="label"><span data-i18n="es">Proyecto propio · 2026</span><span data-i18n="en">Personal project · 2026</span></span>
         <h3 data-i18n="es">Simulador de examen del PER</h3>
         <h3 data-i18n="en">PER exam simulator</h3>
-        <p data-i18n="es">Simulador del examen de Patrón de Embarcaciones de Recreo con el criterio de aprobado del RD 875/2014, mínimos por bloque incluidos. 692 preguntas de 20 convocatorias oficiales (2017–2026), verificadas una a una contra su plantilla de respuestas. Lo construí para preparar mi propio examen: resulté apto.</p>
-        <p data-i18n="en">An exam simulator for the Spanish recreational boating licence (PER), applying the RD 875/2014 pass criteria, per-block minimums included. 692 questions from 20 official sittings (2017–2026), each verified against its answer key. I built it to prepare for my own exam and passed.</p>
+        <p data-i18n="es">El criterio de aprobado del RD 875/2014, codificado tal cual: 32 aciertos de 45 y, además, los mínimos por bloque de balizamiento, RIPA y carta; fallar uno es no apto aunque la nota global dé. Las 692 preguntas salen de 20 convocatorias oficiales (2017–2026), extraídas detectando por geometría el subrayado de la respuesta correcta; cruzarlas contra su examen de origen corrigió 4 respuestas y fusionó 51 duplicados. Lo construí para preparar mi propio examen: resulté apto.</p>
+        <p data-i18n="en">The RD 875/2014 pass criteria for the Spanish recreational boating licence, coded as written: 32 correct out of 45 and, on top of that, per-block minimums in buoyage, collision regulations and chartwork; miss one and it is a fail however good the overall score. The 692 questions come from 20 official sittings (2017–2026), pulled by detecting the underline beneath the correct answer geometrically; cross-checking each against its source exam corrected 4 answers and merged 51 duplicates. I built it to prepare for my own exam and passed.</p>
         <ul class="tech-list">
           <li>JavaScript</li>
           <li>Node.js</li>
           <li>GitHub Actions</li>
           <li><span data-i18n="es">Sin dependencias</span><span data-i18n="en">Zero dependencies</span></li>
-          <li><span data-i18n="es">Repetición espaciada</span><span data-i18n="en">Spaced repetition</span></li>
+          <li><span data-i18n="es">Repaso de falladas</span><span data-i18n="en">Failed-question review</span></li>
         </ul>
         <div class="project-links">
           <a class="link-pill solid" href="https://dacongan.github.io/simulador-titulaciones-nauticas/" target="_blank" rel="noopener">
@@ -1037,6 +1037,71 @@
           <a class="link-pill" href="https://github.com/Dacongan/simulador-titulaciones-nauticas" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.6 2 12.3c0 4.5 2.9 8.3 6.8 9.7.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.3 1.1 2.9.9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.2-4.6-5.1 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.3 9.3 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.8-4.6 5.1.4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10.2 10.2 0 0 0 22 12.3C22 6.6 17.5 2 12 2z"/></svg>
             <span data-i18n="es">Ver en GitHub</span><span data-i18n="en">View on GitHub</span>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project reveal" data-d="2">
+      <div class="project-visual">
+        <svg viewBox="0 0 480 360" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <defs>
+            <pattern id="pvstgrid" width="34" height="34" patternUnits="userSpaceOnUse">
+              <path d="M34 0H0V34" fill="none" stroke="rgba(244,245,243,.05)" stroke-width="1"/>
+            </pattern>
+            <clipPath id="pvstdisc"><circle cx="240" cy="232" r="54"/></clipPath>
+          </defs>
+          <rect width="480" height="360" fill="url(#pvstgrid)"/>
+          <g fill="none" stroke="rgba(244,245,243,.2)" stroke-width="1.2">
+            <rect x="46" y="64" width="58" height="56" rx="3"/>
+            <rect x="244" y="64" width="58" height="56" rx="3"/>
+            <rect x="376" y="64" width="58" height="56" rx="3"/>
+            <circle cx="75" cy="92" r="17" stroke-dasharray="3 4"/>
+            <circle cx="273" cy="92" r="17" stroke-dasharray="3 4"/>
+            <circle cx="405" cy="92" r="17" stroke-dasharray="3 4"/>
+          </g>
+          <g fill="none" stroke="#cf9a57" stroke-width="1.5">
+            <rect x="112" y="64" width="58" height="56" rx="3"/>
+            <rect x="178" y="64" width="58" height="56" rx="3"/>
+            <rect x="310" y="64" width="58" height="56" rx="3"/>
+          </g>
+          <g fill="rgba(207,154,87,.3)" stroke="#cf9a57" stroke-width="1.5">
+            <circle cx="141" cy="92" r="17"/><circle cx="207" cy="92" r="17"/><circle cx="339" cy="92" r="17"/>
+          </g>
+          <g fill="none" stroke="#cf9a57" stroke-width="1.3" stroke-opacity=".6">
+            <path d="M141 126Q141 152 240 172M207 126Q207 152 240 172M339 126Q339 152 240 172"/>
+          </g>
+          <circle cx="240" cy="232" r="54" fill="rgba(207,154,87,.18)" stroke="#cf9a57" stroke-width="2"/>
+          <g clip-path="url(#pvstdisc)" fill="none" stroke="#cf9a57" stroke-width="1.4" stroke-opacity=".55">
+            <ellipse cx="240" cy="212" rx="54" ry="9"/>
+            <ellipse cx="240" cy="248" rx="54" ry="7"/>
+          </g>
+          <text x="440" y="46" text-anchor="end" fill="rgba(244,245,243,.4)" font-family="'IBM Plex Mono',monospace" font-size="13">N → 1</text>
+          <line x1="40" y1="304" x2="440" y2="304" stroke="rgba(244,245,243,.34)" stroke-width="1"/>
+          <text x="240" y="332" text-anchor="middle" fill="#cf9a57" font-family="'IBM Plex Mono',monospace" font-size="14" font-weight="500">astroprep · astrostack · astrosharp</text>
+        </svg>
+        <span class="project-tag"><span data-i18n="es">Software · Astronomía</span><span data-i18n="en">Software · Astronomy</span></span>
+      </div>
+      <div class="project-body">
+        <span class="label"><span data-i18n="es">Proyecto propio · 2026</span><span data-i18n="en">Personal project · 2026</span></span>
+        <h3>strehl</h3>
+        <p data-i18n="es">Tres programas de terminal —astroprep, astrostack y astrosharp— que sacan una imagen nítida de un planeta, la Luna o el Sol a partir de un vídeo de miles de fotogramas. La atmósfera emborrona cada uno de forma distinta, así que el truco está en quedarse solo con los momentos buenos, zona por zona, y sumarlos: la técnica se llama lucky imaging. Lo hice porque los programas que hacen esto son cerrados y solo funcionan en Windows.</p>
+        <p data-i18n="en">Three terminal programs — astroprep, astrostack and astrosharp — that pull one sharp image of a planet, the Moon or the Sun out of a video of thousands of frames. The atmosphere blurs each frame differently, so the trick is to keep only the good moments, area by area, and add them up: the technique is called lucky imaging. I built it because the programs that do this are closed and Windows-only.</p>
+        <ul class="tech-list">
+          <li>Python</li>
+          <li>NumPy</li>
+          <li><span data-i18n="es">Alineado multipunto</span><span data-i18n="en">Multipoint alignment</span></li>
+          <li><span data-i18n="es">Wavelets à trous</span><span data-i18n="en">À trous wavelets</span></li>
+          <li>Richardson-Lucy</li>
+        </ul>
+        <div class="project-links">
+          <a class="link-pill solid" href="https://github.com/Dacongan/strehl" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.6 2 12.3c0 4.5 2.9 8.3 6.8 9.7.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.3 1.1 2.9.9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.2-4.6-5.1 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.3 9.3 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.8-4.6 5.1.4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10.2 10.2 0 0 0 22 12.3C22 6.6 17.5 2 12 2z"/></svg>
+            <span data-i18n="es">Ver en GitHub</span><span data-i18n="en">View on GitHub</span>
+          </a>
+          <a class="link-pill" href="https://github.com/Dacongan/strehl/blob/main/docs/ROADMAP.md" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/></svg>
+            <span data-i18n="es">Estado y roadmap</span><span data-i18n="en">Status &amp; roadmap</span>
           </a>
         </div>
       </div>
@@ -1213,7 +1278,7 @@
 <footer>
   <div class="foot-inner">
     <span><span data-i18n="es">© 2026 David Conesa Pagán · Cartagena, España</span><span data-i18n="en">© 2026 David Conesa Pagán · Cartagena, Spain</span></span>
-    <span><span data-i18n="es">Hecho con HTML, CSS y JS</span><span data-i18n="en">Built with HTML, CSS &amp; JS</span> · <a href="https://github.com/Dacongan" target="_blank" rel="noopener">@Dacongan</a></span>
+    <span><span data-i18n="es">Hecho con HTML, CSS y JS</span><span data-i18n="en">Built with HTML, CSS &amp; JS</span> · <a href="https://github.com/Dacongan" target="_blank" rel="noopener">@Dacongan</a> · <span data-i18n="es">Desarrollo asistido por IA (Claude Code)</span><span data-i18n="en">AI-assisted development (Claude Code)</span></span>
   </div>
 </footer>
 
