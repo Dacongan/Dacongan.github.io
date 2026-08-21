@@ -49,7 +49,6 @@ It's a fast, dependency-free, **single-page** site built with vanilla **HTML, CS
 - ⚓ **Maritime aesthetic** — deep-navy palette and clean typography that fit the naval architecture theme.
 - 🎓 **Education timeline** — my academic journey from Physics (UMU) to Engineering (UPCT).
 - 📜 **Certifications section** — verifiable complementary training (Ansys/ESSS, UIMP, Santander Open Academy, ESADE, IE University).
-- 📝 **Course-material samples** — free previews of my own **LaTeX** notes, available for download.
 - 🔗 **Academic profiles** — direct links to LinkedIn, ResearchGate, ORCID and Zenodo.
 - ⚡ **Zero dependencies** — loads instantly, hosted entirely on GitHub Pages.
 
@@ -60,12 +59,9 @@ It's a fast, dependency-free, **single-page** site built with vanilla **HTML, CS
 ```text
 Dacongan.github.io/
 ├── index.html                   # Main single-page portfolio (bilingual EN/ES)
-├── aviso-legal.html             # Legal notice
-├── muestra-matematicas-i.pdf    # Sample notes — Mathematics I
-├── muestra-matematicas-ii.pdf   # Sample notes — Mathematics II
-├── muestra-fisica-i.pdf         # Sample notes — Physics I
-├── muestra-quimica.pdf          # Sample notes — Chemistry
-├── muestra-informatica.pdf      # Sample notes — Computer Science
+├── robots.txt
+├── sitemap.xml
+├── LICENSE
 └── .gitignore
 ```
 
@@ -108,25 +104,6 @@ That's it — no installs, no dependencies. 🎉
 
 </details>
 
-<details>
-<summary><b>📝 Course material</b></summary>
-
-<br>
-
-The site includes **free samples** of my own study notes, typeset in **LaTeX**:
-
-| Subject | Sample |
-| --- | --- |
-| Mathematics I | [View](https://dacongan.github.io/muestra-matematicas-i.pdf) |
-| Mathematics II | [View](https://dacongan.github.io/muestra-matematicas-ii.pdf) |
-| Physics I | [View](https://dacongan.github.io/muestra-fisica-i.pdf) |
-| Chemistry | [View](https://dacongan.github.io/muestra-quimica.pdf) |
-| Computer Science | [View](https://dacongan.github.io/muestra-informatica.pdf) |
-
-Full editions are available on request — first-year students can reach out through the form linked on the site.
-
-</details>
-
 ---
 
 ## 🔗 Connect with me
@@ -149,9 +126,8 @@ Full editions are available on request — first-year students can reach out thr
 This repository is covered by **two separate terms**:
 
 - **Source code** (HTML, CSS &amp; JavaScript) — released under the **MIT License**. You are free to use, modify and redistribute it, keeping the copyright notice. See [`LICENSE`](LICENSE).
-- **Personal content** — texts, course notes (PDFs), images and branding — is © 2026 **David Conesa Pagán**, **all rights reserved**. It may not be reused, redistributed or adapted without written permission.
+- **Personal content** — texts, images and branding — is © 2026 **David Conesa Pagán**, **all rights reserved**. It may not be reused, redistributed or adapted without written permission.
 
-See [`aviso-legal.html`](https://dacongan.github.io/aviso-legal.html) for the full legal notice.
 
 <div align="center">
 
