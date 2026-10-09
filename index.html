@@ -331,6 +331,11 @@
   .project-body .label{display:block;margin-bottom:12px}
   .project-body h3{font-size:1.5rem;font-weight:600;margin-bottom:14px}
   .project-body p{color:var(--ink-soft);margin-bottom:22px;font-size:1rem}
+  .project-body p.project-note{
+    font-size:.86rem;line-height:1.5;margin-top:-8px;padding:10px 14px;
+    border-left:2px solid var(--brass);background:var(--paper-dim);border-radius:0 8px 8px 0;
+  }
+  .project-body p.project-note strong{color:var(--ink);font-weight:600}
   .tech-list{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:26px;list-style:none}
   .tech-list li{
     font-family:'IBM Plex Mono',monospace;font-size:.74rem;
@@ -396,6 +401,40 @@
     color:var(--brass);border:1px solid rgba(178,122,59,.45);
     padding:4px 10px;border-radius:6px;background:rgba(178,122,59,.07);
   }
+
+
+  /* ---- Apuntes propios en timeline ---- */
+  .tl-mat{margin-top:20px;max-width:760px}
+  .tl-mat-head{
+    font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink-soft);margin-bottom:10px;display:flex;align-items:center;gap:10px;
+  }
+  .tl-mat-head::after{content:"";flex:1;height:1px;background:var(--line)}
+  .tl-mat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+  .mat{
+    display:flex;padding:16px 18px;background:var(--surface);
+    border:1px solid var(--line);border-radius:10px;
+    transition:border-color .2s,transform .2s,box-shadow .2s;
+  }
+  .mat:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shadow:0 14px 30px -22px rgba(10,35,66,.45)}
+  .mat-body{min-width:0;display:flex;flex-direction:column;width:100%}
+  .mat-title{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1rem;color:var(--ink);line-height:1.25}
+  .mat-topics{font-size:.8rem;color:var(--ink-soft);line-height:1.4;margin-top:3px}
+  .mat-meta{font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.03em;color:var(--brass);margin-top:6px}
+  .mat-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:10px}
+  .mat-links a{
+    display:inline-flex;align-items:center;gap:5px;
+    font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:.7rem;letter-spacing:.02em;
+    text-decoration:none;padding:6px 11px;border-radius:7px;white-space:nowrap;
+    transition:background .2s,color .2s,border-color .2s;
+  }
+  .mat-links .ml-pdf{background:var(--brass);color:var(--prussian)}
+  .mat-links .ml-pdf:hover{background:var(--brass-light)}
+  .mat-links .ml-pdf small{font-size:.62rem;opacity:.7;font-weight:400}
+  .mat-links .ml-doi{border:1px solid var(--line-strong);color:var(--ink)}
+  .mat-links .ml-doi:hover{background:var(--prussian);color:var(--paper);border-color:var(--prussian)}
+  .mat-links a svg{width:12px;height:12px}
+  @media(max-width:560px){.tl-mat-grid{grid-template-columns:1fr}}
 
   /* ---- Nota futura ---- */
   .note{
@@ -491,7 +530,6 @@
         <li><a href="#experiencia"><span data-i18n="es">Experiencia</span><span data-i18n="en">Experience</span></a></li>
         <li><a href="#certificaciones"><span data-i18n="es">Certificaciones</span><span data-i18n="en">Certifications</span></a></li>
         <li><a href="#proyectos"><span data-i18n="es">Proyectos</span><span data-i18n="en">Projects</span></a></li>
-        <li><a href="#material"><span data-i18n="es">Material</span><span data-i18n="en">Material</span></a></li>
         <li><a href="#contacto"><span data-i18n="es">Contacto</span><span data-i18n="en">Contact</span></a></li>
       </ul>
       <button type="button" class="lang-toggle" id="langToggle" aria-label="Switch to English" aria-pressed="false" title="Idioma / Language">
@@ -679,6 +717,33 @@
         <p data-i18n="es">Formación en ingeniería aplicada al diseño y los sistemas del buque, sobre una base sólida de física y cálculo.</p>
         <p data-i18n="en">Engineering training applied to ship design and systems, on a solid foundation of physics and calculus.</p>
         <span class="tl-badge"><span data-i18n="es">1.er curso · 9 matrículas de honor</span><span data-i18n="en">1st year · 9 distinctions</span></span>
+        <div class="tl-mat">
+          <div class="tl-mat-head"><span data-i18n="es">Apuntes publicados</span><span data-i18n="en">Published notes</span></div>
+          <div class="tl-mat-grid">
+            <article class="mat">
+              <div class="mat-body">
+                <div class="mat-title"><span data-i18n="es">Física I</span><span data-i18n="en">Physics I</span></div>
+                <div class="mat-topics"><span data-i18n="es">Cinemática, dinámica, sólido rígido, fluidos y termodinámica</span><span data-i18n="en">Kinematics, dynamics, rigid body, fluids and thermodynamics</span></div>
+                <div class="mat-meta"><span data-i18n="es">2026 · 163 pág. · CC BY-NC-SA</span><span data-i18n="en">2026 · 163 pp · CC BY-NC-SA</span></div>
+                <div class="mat-links">
+                  <a class="ml-pdf" href="https://zenodo.org/records/22918969/files/physics-1.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg>PDF <small>28 MB</small></a>
+                  <a class="ml-doi" href="https://doi.org/10.5281/zenodo.22918969" target="_blank" rel="noopener">DOI ↗</a>
+                </div>
+              </div>
+            </article>
+            <article class="mat">
+              <div class="mat-body">
+                <div class="mat-title"><span data-i18n="es">Física II</span><span data-i18n="en">Physics II</span></div>
+                <div class="mat-topics"><span data-i18n="es">Electrostática, magnetismo, inducción, ondas y óptica</span><span data-i18n="en">Electrostatics, magnetism, induction, waves and optics</span></div>
+                <div class="mat-meta"><span data-i18n="es">2026 · 155 pág. · CC BY-NC-SA</span><span data-i18n="en">2026 · 155 pp · CC BY-NC-SA</span></div>
+                <div class="mat-links">
+                  <a class="ml-pdf" href="https://zenodo.org/records/22919519/files/physics-2.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg>PDF <small>8 MB</small></a>
+                  <a class="ml-doi" href="https://doi.org/10.5281/zenodo.22919519" target="_blank" rel="noopener">DOI ↗</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
       </div>
       <div class="tl-item reveal" data-d="2">
         <div class="tl-logo"><img src="data:image/png;base64,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" alt="Universidad de Murcia"></div>
@@ -688,6 +753,22 @@
         <div class="tl-org">Universidad de Murcia</div>
         <p data-i18n="es">Base en cálculo, álgebra y física. Reorientación propia hacia la ingeniería buscando la aplicación práctica de esa fundamentación científica.</p>
         <p data-i18n="en">Grounding in calculus, algebra and physics. A deliberate move toward engineering, seeking the practical application of that scientific foundation.</p>
+        <div class="tl-mat">
+          <div class="tl-mat-head"><span data-i18n="es">Apuntes publicados</span><span data-i18n="en">Published notes</span></div>
+          <div class="tl-mat-grid">
+            <article class="mat">
+              <div class="mat-body">
+                <div class="mat-title"><span data-i18n="es">Laboratorio de Ordenadores</span><span data-i18n="en">Computer Laboratory</span></div>
+                <div class="mat-topics"><span data-i18n="es">Física computacional: Euler, oscilador armónico y problema de dos cuerpos</span><span data-i18n="en">Computational physics: Euler, harmonic oscillator and the two-body problem</span></div>
+                <div class="mat-meta"><span data-i18n="es">2025 · 44 pág. · Python</span><span data-i18n="en">2025 · 44 pp · Python</span></div>
+                <div class="mat-links">
+                  <a class="ml-pdf" href="https://zenodo.org/records/20773128/files/Apuntes%20Laboratorio%20de%20Ordenadores.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg>PDF <small>3 MB</small></a>
+                  <a class="ml-doi" href="https://doi.org/10.5281/zenodo.20773128" target="_blank" rel="noopener">DOI ↗</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -863,6 +944,67 @@
       <div class="project-visual">
         <svg viewBox="0 0 480 360" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
           <defs>
+            <pattern id="pvwgrid" width="34" height="34" patternUnits="userSpaceOnUse">
+              <path d="M34 0H0V34" fill="none" stroke="rgba(244,245,243,.05)" stroke-width="1"/>
+            </pattern>
+            <linearGradient id="pvwfill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#F4F5F3" stop-opacity=".12"/>
+              <stop offset="100%" stop-color="#F4F5F3" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <rect width="480" height="360" fill="url(#pvwgrid)"/>
+          <g stroke="rgba(244,245,243,.06)" stroke-width="1"><line x1="60" y1="126" x2="420" y2="126"/><line x1="60" y1="181" x2="420" y2="181"/></g>
+          <line x1="60" y1="236" x2="420" y2="236" stroke="rgba(244,245,243,.22)" stroke-width="1"/>
+          <polygon points="60,236 60.0,188.5 67.5,192.8 75.0,196.4 82.5,199.2 90.0,201.3 97.5,202.6 105.0,203.0 112.5,202.6 120.0,201.3 127.5,199.2 135.0,196.4 142.5,192.8 150.0,188.5 157.5,183.6 165.0,178.2 172.5,172.4 180.0,166.3 187.5,160.0 195.0,153.5 202.5,147.0 210.0,140.7 217.5,134.6 225.0,128.8 232.5,123.4 240.0,118.5 247.5,114.2 255.0,110.6 262.5,107.8 270.0,105.7 277.5,104.4 285.0,104.0 292.5,104.4 300.0,105.7 307.5,107.8 315.0,110.6 322.5,114.2 330.0,118.5 337.5,123.4 345.0,128.8 352.5,134.6 360.0,140.7 367.5,147.0 375.0,153.5 382.5,160.0 390.0,166.3 397.5,172.4 405.0,178.2 412.5,183.6 420.0,188.5 420,236" fill="url(#pvwfill)"/>
+          <polyline points="60.0,188.5 67.5,192.8 75.0,196.4 82.5,199.2 90.0,201.3 97.5,202.6 105.0,203.0 112.5,202.6 120.0,201.3 127.5,199.2 135.0,196.4 142.5,192.8 150.0,188.5 157.5,183.6 165.0,178.2 172.5,172.4 180.0,166.3 187.5,160.0 195.0,153.5 202.5,147.0 210.0,140.7 217.5,134.6 225.0,128.8 232.5,123.4 240.0,118.5 247.5,114.2 255.0,110.6 262.5,107.8 270.0,105.7 277.5,104.4 285.0,104.0 292.5,104.4 300.0,105.7 307.5,107.8 315.0,110.6 322.5,114.2 330.0,118.5 337.5,123.4 345.0,128.8 352.5,134.6 360.0,140.7 367.5,147.0 375.0,153.5 382.5,160.0 390.0,166.3 397.5,172.4 405.0,178.2 412.5,183.6 420.0,188.5" fill="none" stroke="#F4F5F3" stroke-width="2" stroke-linejoin="round"/>
+          <polyline points="60.0,203.1 67.5,204.2 75.0,205.2 82.5,206.2 90.0,207.0 97.5,207.8 105.0,208.4 112.5,208.9 120.0,209.3 127.5,209.5 135.0,209.6 142.5,209.5 150.0,209.3 157.5,208.9 165.0,208.4 172.5,207.8 180.0,207.0 187.5,206.2 195.0,205.2 202.5,204.2 210.0,203.1 217.5,201.9 225.0,200.8 232.5,199.7 240.0,198.5 247.5,197.4 255.0,196.4 262.5,195.4 270.0,194.6 277.5,193.8 285.0,193.2 292.5,192.7 300.0,192.3 307.5,192.1 315.0,192.0 322.5,192.1 330.0,192.3 337.5,192.7 345.0,193.2 352.5,193.8 360.0,194.6 367.5,195.4 375.0,196.4 382.5,197.4 390.0,198.5 397.5,199.7 405.0,200.8 412.5,201.9 420.0,203.1" fill="none" stroke="#cf9a57" stroke-width="1.8" stroke-dasharray="6 4" stroke-linejoin="round"/>
+          <text x="428" y="193" fill="#F4F5F3" font-family="'IBM Plex Mono',monospace" font-size="11" font-weight="500">T</text>
+          <text x="428" y="211" fill="#cf9a57" font-family="'IBM Plex Mono',monospace" font-size="11" font-weight="500">Td</text>
+          <g fill="rgba(244,245,243,.35)" font-family="'IBM Plex Mono',monospace" font-size="9" text-anchor="middle">
+            <text x="60" y="252">00</text><text x="150" y="252">06</text><text x="240" y="252">12</text><text x="330" y="252">18</text><text x="420" y="252">24</text>
+          </g>
+          <rect x="40" y="284" width="400" height="40" rx="6" fill="rgba(207,154,87,.05)" stroke="rgba(207,154,87,.2)" stroke-width="1"/>
+          <g font-family="'IBM Plex Mono',monospace" text-anchor="middle">
+            <text x="90" y="304" fill="#F4F5F3" font-size="14" font-weight="500">20.8°</text><text x="90" y="317" fill="rgba(244,245,243,.35)" font-size="8">°C</text>
+            <text x="190" y="304" fill="#F4F5F3" font-size="14" font-weight="500">62%</text><text x="190" y="317" fill="rgba(244,245,243,.35)" font-size="8">RH</text>
+            <text x="290" y="304" fill="#F4F5F3" font-size="14" font-weight="500">1019</text><text x="290" y="317" fill="rgba(244,245,243,.35)" font-size="8">hPa</text>
+            <text x="390" y="304" fill="#cf9a57" font-size="14" font-weight="500">13.2°</text><text x="390" y="317" fill="rgba(207,154,87,.55)" font-size="8">dew point</text>
+          </g>
+          <g stroke="rgba(244,245,243,.1)" stroke-width="1"><line x1="140" y1="292" x2="140" y2="316"/><line x1="240" y1="292" x2="240" y2="316"/><line x1="340" y1="292" x2="340" y2="316"/></g>
+        </svg>
+        <span class="project-tag"><span data-i18n="es">Hardware · IoT</span><span data-i18n="en">Hardware · IoT</span></span>
+      </div>
+      <div class="project-body">
+        <span class="label"><span data-i18n="es">Proyecto propio · 2026</span><span data-i18n="en">Personal project · 2026</span></span>
+        <h3>pi-weather-logger</h3>
+        <p data-i18n="es">Estación meteorológica de ventana con una Raspberry Pi Model B Rev 2 y sensores AHT20 + BMP280 por I²C. Registra temperatura, humedad y presión atmosférica, genera un CSV diario y publica los datos como página estática en GitHub Pages. Es el banco de pruebas del firmware de mi instrumentación de telescopio: el punto de rocío que se calcula aquí es el mismo que activa el calentador del secundario.</p>
+        <p data-i18n="en">Window-mounted weather station running on a Raspberry Pi Model B Rev 2 with AHT20 + BMP280 sensors over I²C. Logs temperature, humidity and atmospheric pressure, writes one CSV per day and publishes the data as a static page on GitHub Pages. It doubles as the test bed for my telescope instrumentation firmware: the dew point computed here is the same one that triggers the secondary heater.</p>
+        <p class="project-note" data-i18n="es"><strong>En curso:</strong> busco una ubicación mejor para el sensor. Ahora le da el sol directo y, en las horas centrales del día, marca temperaturas que no son reales.</p>
+        <p class="project-note" data-i18n="en"><strong>In progress:</strong> I'm looking for a better spot for the sensor. It currently sits in direct sunlight, so around midday it reads temperatures that aren't real.</p>
+        <ul class="tech-list">
+          <li>Raspberry Pi</li>
+          <li>Python</li>
+          <li>I²C</li>
+          <li>AHT20 · BMP280</li>
+          <li>GitHub Pages</li>
+        </ul>
+        <div class="project-links">
+          <a class="link-pill solid" href="https://github.com/Dacongan/pi-weather-logger" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.6 2 12.3c0 4.5 2.9 8.3 6.8 9.7.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.3 1.1 2.9.9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.2-4.6-5.1 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.3 9.3 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.8-4.6 5.1.4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10.2 10.2 0 0 0 22 12.3C22 6.6 17.5 2 12 2z"/></svg>
+            <span data-i18n="es">Ver en GitHub</span><span data-i18n="en">View on GitHub</span>
+          </a>
+          <a class="link-pill" href="https://dacongan.github.io/pi-weather-logger/web/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>
+            <span data-i18n="es">Datos en vivo</span><span data-i18n="en">Live data</span>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project reveal" data-d="1">
+      <div class="project-visual">
+        <svg viewBox="0 0 480 360" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <defs>
             <pattern id="pvpergrid" width="34" height="34" patternUnits="userSpaceOnUse">
               <path d="M34 0H0V34" fill="none" stroke="rgba(244,245,243,.05)" stroke-width="1"/>
             </pattern>
@@ -987,141 +1129,14 @@
   </div>
 </section>
 
-<section id="material" style="background:var(--paper-dim)">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="label"><span data-i18n="es">06 — Material propio</span><span data-i18n="en">06 — Own material</span></span>
-      <h2 data-i18n="es">Documentación propia, con&nbsp;DOI.</h2>
-      <h2 data-i18n="en">Own documentation, with a&nbsp;DOI.</h2>
-    </div>
 
-    <article class="project reveal" data-d="1">
-      <div class="project-visual">
-        <svg viewBox="0 0 480 360" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-          <defs>
-            <pattern id="pveratos" width="34" height="34" patternUnits="userSpaceOnUse">
-              <path d="M34 0H0V34" fill="none" stroke="rgba(244,245,243,.05)" stroke-width="1"/>
-            </pattern>
-            <pattern id="pverathatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-              <line x1="0" y1="0" x2="0" y2="9" stroke="rgba(244,245,243,.32)" stroke-width="1"/>
-            </pattern>
-            <radialGradient id="pversun" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#cf9a57" stop-opacity=".45"/>
-              <stop offset="100%" stop-color="#cf9a57" stop-opacity="0"/>
-            </radialGradient>
-          </defs>
-          <rect width="480" height="360" fill="url(#pveratos)"/>
-          <line x1="305.2" y1="41" x2="147.4" y2="296" stroke="rgba(207,154,87,.85)" stroke-width="1.6" stroke-linecap="round"/>
-          <g transform="translate(312 30)">
-            <circle r="26" fill="url(#pversun)"/>
-            <g stroke="#cf9a57" stroke-width="1.6" stroke-linecap="round">
-              <circle r="13" fill="none"/>
-              <line x1="0" y1="-19" x2="0" y2="-25"/>
-              <line x1="0" y1="19" x2="0" y2="25"/>
-              <line x1="-19" y1="0" x2="-25" y2="0"/>
-              <line x1="19" y1="0" x2="25" y2="0"/>
-              <line x1="-13.4" y1="-13.4" x2="-17.7" y2="-17.7"/>
-              <line x1="13.4" y1="13.4" x2="17.7" y2="17.7"/>
-              <line x1="13.4" y1="-13.4" x2="17.7" y2="-17.7"/>
-              <line x1="-13.4" y1="13.4" x2="-17.7" y2="17.7"/>
-            </g>
-            <circle r="6.5" fill="#cf9a57"/>
-          </g>
-          <rect x="70" y="296" width="350" height="9" fill="url(#pverathatch)"/>
-          <line x1="70" y1="296" x2="420" y2="296" stroke="rgba(244,245,243,.34)" stroke-width="1"/>
-          <line x1="243.9" y1="296" x2="147.4" y2="296" stroke="#F4F5F3" stroke-width="3.4"/>
-          <text x="188" y="314" fill="#F4F5F3" font-family="'IBM Plex Mono',monospace" font-size="15" font-style="italic">s</text>
-          <line x1="243.9" y1="296" x2="243.9" y2="140" stroke="#F4F5F3" stroke-width="3.4"/>
-          <text x="253" y="222" fill="#F4F5F3" font-family="'IBM Plex Mono',monospace" font-size="15" font-style="italic">L</text>
-          <path d="M243.9 284 H255.9 V296" fill="none" stroke="rgba(244,245,243,.55)" stroke-width="1"/>
-          <path d="M243.9 174 A34 34 0 0 0 226 168.9" fill="none" stroke="#F4F5F3" stroke-width="1.4"/>
-          <text x="216" y="164" fill="#F4F5F3" font-family="'IBM Plex Mono',monospace" font-size="15" font-style="italic">θ</text>
-        </svg>
-        <span class="project-tag"><span data-i18n="es">Física experimental</span><span data-i18n="en">Experimental physics</span></span>
-      </div>
-      <div class="project-body">
-        <span class="label"><span data-i18n="es">Depósito con DOI · 2026 · UPCT</span><span data-i18n="en">DOI deposit · 2026 · UPCT</span></span>
-        <h3 data-i18n="es">La circunferencia de la Tierra por el método de Eratóstenes</h3>
-        <h3 data-i18n="en">The Earth's circumference by Eratosthenes' method</h3>
-        <p data-i18n="es">Actividad de Física II (UPCT): recreación del experimento de Eratóstenes con una variante de una sola vara, medida en el solsticio de verano. La circunferencia terrestre resulta 39,6 ± 0,5 × 10³ km, a un 0,9 % del valor real, con propagación de incertidumbres por Monte Carlo.</p>
-        <p data-i18n="en">Physics II activity (UPCT): a recreation of Eratosthenes' experiment with a single-gnomon variant, measured at the summer solstice. The Earth's circumference comes out at 39.6 ± 0.5 × 10³ km, within 0.9 % of the true value, with Monte Carlo uncertainty propagation.</p>
-        <ul class="tech-list">
-          <li>Python</li>
-          <li>NumPy</li>
-          <li>Monte Carlo</li>
-          <li><span data-i18n="es">Propagación de incertidumbre</span><span data-i18n="en">Uncertainty propagation</span></li>
-          <li><span data-i18n="es">Trigonometría</span><span data-i18n="en">Trigonometry</span></li>
-        </ul>
-        <div class="project-links">
-          <a class="link-pill solid" href="https://zenodo.org/records/20820211/files/main.pdf" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg>
-            <span data-i18n="es">Ver PDF</span><span data-i18n="en">View PDF</span>
-          </a>
-          <a class="link-pill" href="https://doi.org/10.5281/zenodo.20820211" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14 21 3"/><path d="M15 3h6v6"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>
-            DOI
-          </a>
-        </div>
-      </div>
-    </article>
-
-    <article class="project reveal" data-d="2">
-      <div class="project-visual">
-        <svg viewBox="0 0 480 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-          <defs>
-            <pattern id="pvgrid" width="34" height="34" patternUnits="userSpaceOnUse">
-              <path d="M34 0H0V34" fill="none" stroke="rgba(244,245,243,.05)" stroke-width="1"/>
-            </pattern>
-          </defs>
-          <rect width="480" height="360" fill="url(#pvgrid)"/>
-          <g transform="translate(240 152)">
-            <ellipse cx="0" cy="0" rx="152" ry="94" fill="none" stroke="rgba(207,154,87,.5)" stroke-width="1.4"/>
-            <ellipse cx="0" cy="0" rx="92" ry="56" fill="none" stroke="rgba(244,245,243,.15)" stroke-width="1" stroke-dasharray="3 6"/>
-            <circle cx="0" cy="0" r="20" fill="none" stroke="rgba(207,154,87,.32)" stroke-width="1"/>
-            <circle cx="0" cy="0" r="9" fill="#cf9a57"/>
-            <circle cx="152" cy="0" r="5.5" fill="#F4F5F3"/>
-            <circle cx="-152" cy="0" r="3.5" fill="rgba(244,245,243,.5)"/>
-          </g>
-          <path d="M36 302 Q66 252 96 302 T156 302 T216 302 T276 302 T336 302 T396 302 T456 302" fill="none" stroke="rgba(207,154,87,.55)" stroke-width="1.6" stroke-linecap="round"/>
-          <line x1="36" y1="302" x2="444" y2="302" stroke="rgba(244,245,243,.12)" stroke-width="1"/>
-        </svg>
-        <span class="project-tag"><span data-i18n="es">Física computacional</span><span data-i18n="en">Computational physics</span></span>
-      </div>
-      <div class="project-body">
-        <span class="label"><span data-i18n="es">Depósito con DOI · 2025 · UMU</span><span data-i18n="en">DOI deposit · 2025 · UMU</span></span>
-        <h3 data-i18n="es">Apuntes de Laboratorio de Ordenadores</h3>
-        <h3 data-i18n="en">Computer Laboratory Notes</h3>
-        <p data-i18n="es">Apuntes, código y prácticas resueltas de Física Computacional (1.º del Grado en Física, UMU): integración numérica por Euler y Euler modificado, y simulaciones del oscilador armónico, el problema de dos cuerpos, el péndulo y un muelle en 2D.</p>
-        <p data-i18n="en">Notes, code and solved practicals from Computational Physics (1st year of the Physics degree, UMU): numerical integration with Euler and modified Euler, and simulations of the harmonic oscillator, the two-body problem, the pendulum and a 2D spring.</p>
-        <ul class="tech-list">
-          <li>Python</li>
-          <li>NumPy</li>
-          <li>Matplotlib</li>
-          <li>LaTeX</li>
-          <li><span data-i18n="es">Integración numérica</span><span data-i18n="en">Numerical integration</span></li>
-        </ul>
-        <div class="project-links">
-          <a class="link-pill solid" href="https://zenodo.org/records/20773128/files/Apuntes%20Laboratorio%20de%20Ordenadores.pdf" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg>
-            <span data-i18n="es">Ver PDF</span><span data-i18n="en">View PDF</span>
-          </a>
-          <a class="link-pill" href="https://doi.org/10.5281/zenodo.20773128" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14 21 3"/><path d="M15 3h6v6"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>
-            DOI
-          </a>
-        </div>
-      </div>
-    </article>
-
-  </div>
-</section>
 
 </main>
 
 <section id="contacto" class="contact">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="label"><span data-i18n="es">07 — Contacto</span><span data-i18n="en">07 — Contact</span></span>
+      <span class="label"><span data-i18n="es">06 — Contacto</span><span data-i18n="en">06 — Contact</span></span>
       <h2 data-i18n="es">Trabajemos juntos.</h2>
       <h2 data-i18n="en">Let's work together.</h2>
     </div>
